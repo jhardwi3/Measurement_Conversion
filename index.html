@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Feet-to-Inches</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Measurement Conversion</h1>
+    <form>
+      <p>
+        Feet:
+        <input
+          type="number"
+          id="InputFeet"
+          size="15"
+          maxlength="200"
+          oninput="lengthConverter(this.value)"
+          onchange="lengthConverter(this.value)"
+        />
+      </p>
+      <p>Inches: <span id="outputInches"></span></p>
+    </form>
+    <script>
+      function lengthConverter(valNum) {
+        document.getElementById("outputInches").innerHTML = valNum * 12;
+      }
+    </script>
+  </body>
+</html>
